@@ -1,6 +1,6 @@
 ' FM音源音色エディタ
 '
-' 2019/05/10
+' 2019/05/10-05/13
 ' kumagai
 '
 ' 00 @      0
@@ -31,6 +31,7 @@ dim vp(4, 9)
 dim vpmax(4, 10)
 dim vpmin(4, 10)
 dim vpstp(4, 10)
+dim vname$(81)
 cls 3
 '
 ' 値の範囲読み込み
@@ -46,6 +47,12 @@ for i=0 to 10
     vpstp(j, i) = stp
   next j
 next i
+'
+open "vname.txt" for input as #1
+  for i=0 to 81
+    read vname$(i)
+  next i
+close #1
 '
 vn = 0
 ' 音色読み込み
@@ -84,7 +91,7 @@ end
 ' パラメータ表示
 *printvn
 voice copy vn, vp
-locate 0, 0 : print using "@      #"; vn
+locate 0, 0 : print using "@      ##  @"; vn; vname$(vn)
 locate 0, 2 : print using "FB     #"; (vp(0, 0) and &h38) / 8
 locate 0, 3 : print using "ALG    #"; vp(0, 0) and &h7
 locate 0, 4 : print using "WF     #"; vp(0, 2)
@@ -98,7 +105,7 @@ locate 0, 11 : print " MSK AR  DR  SR  RR  SL  TL  KS  ML  DT  AS"
 for i=0 to 4
   for j=0 to 9
     locate 1+4*j, 11+i
-    print using "#####"; vp(i+1, j)
+    print using "###"; vp(i+1, j)
   next j
 next i
 return
