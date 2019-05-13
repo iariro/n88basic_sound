@@ -31,9 +31,10 @@ dim vp(4, 9)
 dim vpmax(4, 10)
 dim vpmin(4, 10)
 dim vpstp(4, 10)
+cls 3
 '
 ' 値の範囲読み込み
-for i=0 to 7
+for i=0 to 8
   read vpmin(0, i), vpmax(0, i), vpstp(0, i)
 next i
 '
@@ -93,11 +94,11 @@ locate 0, 7 : print using "PD     ###"; vp(0, 5)
 locate 0, 8 : print using "AD     ###"; vp(0, 6)
 locate 0, 9 : print using "PS     ##"; vp(0, 7)
 '
-locate 11,0 : print " MSK AR  DR  SR  RR  SL  TL  KS  ML  DT  AS"
+locate 0, 11 : print " MSK AR  DR  SR  RR  SL  TL  KS  ML  DT  AS"
 for i=0 to 4
   for j=0 to 9
-    locate 1+4*j, i
-    print using "#####"; vp(i, j)
+    locate 1+4*j, 11+i
+    print using "#####"; vp(i+1, j)
   next j
 next i
 return
@@ -113,17 +114,17 @@ return
 stp=0
 if k$="u" or k$="U" then stp=1
 if k$="d" or k$="D" then stp=-1
-on area goto *updown0 *updown1 *updown2
+on area goto *updown0,*updown1,*updown2
 '
 *updown0
-if (stp=1 and vn<82) or (stp=-1 and vn>0) then vn = vn + stp : gosub *printvn else beep
+if (stp=1 and vn<81) or (stp=-1 and vn>0) then vn = vn + stp : gosub *printvn else beep
 return
 '
 *updown1
 fb = (vp(0,0) and &h38)/8
 alg = (vp(0,0) and &h7)
-if cy=0 and ((stp=-1 and fb>vpmin(0,0)) or (stp=1 and fb<vpmax(0,0))) then fb=fb+stp : vp(0,0) = fb*8+vp(0,0) and &h7
-if cy=1 and ((stp=-1 and alg>vpmin(0,1)) or (stp=1 and alg<vpmax(0,1))) then alg=alg+stp : vp(0,0) = vp(0,0) and &h38 + alg
+if cy=0 and ((stp=-1 and fb>vpmin(0,0)) or (stp=1 and fb<vpmax(0,0))) then fb=fb+stp : vp(0,0) = fb*8+alg
+if cy=1 and ((stp=-1 and alg>vpmin(0,1)) or (stp=1 and alg<vpmax(0,1))) then alg=alg+stp : vp(0,0) = fb*8+alg
 if cy>=2 and ((stp=-1 and vp(0,cy)>vpmin(0,cy)) or (stp=1 and vp(0,cy)<vpmax(0,cy))) then vp(0,cy) = vp(0,cy) + stp * vpstp(0,cy)
 return
 '
@@ -132,20 +133,20 @@ if cx=0 then *updown21 else *updown22
 *updown21
 msk=vp(0,1) and (2^cy)
 if stp=-1 and msk>0 then msk=0 else if stp=1 and msk=0 then msk=(2^cy) else beep : return
-vp(0,1) = (vp(0,1) and (&hf - 2^cy)) + msk
+vp(0,1) = (vp(0,1) and (&hf - 2^cy)) or msk
 locate 1+4*cx, 11+cy
 print using "###"; vp(cx, cy)
 return
 '
 *updown22
-if (stp=-1 and vp(cx,cy)>vpmin(cx,cy+1)) or (stp=1 and vp(cx,cy)<vpmax(cx,cy+1)) then vp(cx,cy)=vp(cx,cy)+stp else beep : return
+if (stp=-1 and vp(cx-1,cy)>vpmin(cx,cy+1)) or (stp=1 and vp(cx-1,cy)<vpmax(cx,cy+1)) then vp(cx-1,cy)=vp(cx-1,cy)+stp*vpstp(cx,cy+1) else beep : return
 locate 1+4*cx, 11+cy
-print using "###"; vp(cx, cy)
+print using "###"; vp(cx-1, cy)
 return
 ' ------------------------------------------------------------------------------
 ' カーソル移動
 *move
-on area goto *move0 *move1 *move2
+on area goto *move0,*move1,*move2
 *move0
 if asc(k$) = 31 then area=1 : locate 6, 0 : print " " else beep
 return
@@ -186,6 +187,7 @@ data -127, 127, 1
 data -127, 127, 1
 data 0, 15, 1
 '
+data 0, 1, 1
 data 0, 31, 1
 data 0, 31, 1
 data 0, 31, 1
