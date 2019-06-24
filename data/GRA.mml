@@ -1,0 +1,115 @@
+'                グラディウスⅢ　　　　　～Ｔｒｙ　ｔｏ　Ｓｔａｒ～
+'                                                (c) Konami SquareWave Club
+'                                                    遠藤　亜由美
+VOICE
+ 1
+ 60,  15,   0,   1,2000,-127,   0,   8,   0,   0
+  0,  10,  11,  12,  10, 120,   0,   2,   0,   0
+  0,   5,   4,   9,   2, 110,   0,   1,   0,   0
+  0,  12,  16,  12,  11, 110,   0,   0,   3,   0
+  0,  15,  17,   9,  11, 120,   0,   1,   7,   0
+VOICE
+ 2
+ 60,  15,   0,   1,1500,-120,   0,   2,   0,   0
+ 0,  16,  25,   8,  15, 120,   0,   2,   0,   0
+ 0,  13,  15,   7,  12, 124,   0,   0,   0,   0
+ 0,  13,  11,   2,  12, 124,   0,   0,   0,   0
+ 0,  13,  11,   2,  10, 125,   0,   0,   0,   0
+VOICE
+ 3
+ 49,  15,   0,   0,   0,   0,   0,   0,   0,   0
+ 0,  15,  12,  12,  12, 121,   0,   1,   3,   0
+ 0,  22,  15,  10,  10, 110,   0,  14,   3,   0
+ 0,  22,  14,  11,  11, 110,   0,   7,   3,   0
+ 0,  10,  15,   6,   6, 110,   0,   7,   7,   0
+VOICE
+ 4
+ 62,  15,   0,   1,1500,-120,   0,  11,   0,   0
+ 0,  15,  12,  12,  14, 127,   0,  11,   3,   0
+ 0,  10,  12,   4,   4, 110,   0,   1,   3,   0
+ 0,  12,  11,   7,  14, 120,   0,   2,   7,   0
+ 0,  15,  16,   7,  11, 127,   0,   1,   7,   0
+VOICE
+ 5
+ 58,  15,   2,  18,2500,  85,   0,   1,   0,   0
+ 18,  22,  24,  11,  11,  88,   0,   4,   0,   0
+ 14,  22,  25,  10,  12,  90,   0,   4,   0,   0
+ 14,  19,  21,  13,  14,  97,   0,   4,   0,   0
+ 10,  22,  28,   7,  14, 127,   0,   4,   0,   0
+VOICE
+ 6
+ 59,  15,   0,   0,   0,   0,   0,   0,   0,   0
+ 0,  18,  27,  12,  12,  70,   0,   5,   0,   0
+ 0,  18,  27,  12,  12,  96,   0,   2,   0,   0
+ 0,  21,  31,  12,  11, 110,   0,   1,   0,   0
+ 0,  18,  26,   9,  12, 127,   0,   1,   0,   0
+VOICE
+ 7
+ 60,  15,   0,   0,   0,   0,   0,   0,   0,   0
+ 0,  20,  20,  12,  11, 110,   0,   5,   3,   0
+ 10,  18,  20,   8,  10, 127,   0,   4,   3,   0
+ 0,  20,  20,  12,  11, 111,   0,   4,   7,   0
+ 10,  22,  22,   8,  12, 127,   0,   4,   7,   0
+VOICE
+ 8
+ 58,  15,   2,  18,2500,  85,   0,   1,   0,   0
+ 18,  22,  24,  15,  11,  85,   0,   4,   0,   0
+ 14,  22,  25,  14,  12,  90,   0,   4,   0,   0
+ 14,  19,  21,  15,  14,  97,   0,   4,   0,   0
+ 10,  22,  28,  14,  14, 127,   0,   4,   0,   0
+VOICE
+ 9
+ 56,  15,   0,   0,   0,   0,   0,   0,   0,   0
+ 0,  12,  25,  12,  15, 120,   0,  15,   0,   0
+ 0,  12,  25,  12,  15, 125,   0,  14,   0,   0
+ 0,  14,  23,  12,  15, 125,   0,  14,   0,   0
+ 0,  12,  17,   6,  12, 127,   0,   6,   0,   0
+MML
+ T240MB
+ MB
+ MB
+ MB
+ MB
+ MB
+MML
+ @7O2@V121L4 R4FR8ER8FR8ER8R4 R4E-R8DR8E-R8DR8 R4
+ @6 O3@V115L8 CCCC CCCC CC<B->C4CCC CCCC CCCC CC<B->C4CCC
+ O3V15L8 @1C@3C@2C@3C@1CC@2C@3C @1C@3C@2C@1C@3C@1C@2C@3C @1C@3C@2C@3C@1CC@2C@3C @1C@3C@2C@1C@3C@1C@2CC
+ L8V10O5Q6 G>CE<G>CF<G>CE<G>CF<G>CE<G FB->D<FB->E-<FB->D<FB->E-<FB->D<F
+ L8V8O5Q6R16. G>CE<G>CF<G>CE<G>CF<G>CE<G FB->D<FB->E-<FB->D<FB->E-<FB->D<F
+ R1R1R1R1
+MML
+ R4FR8ER8FR8ER8R4 R4E-R8D<B-1^8
+ R4FR8ER8FR8ER8R4 R4E-R8D<B-1^8
+ @1C@3C@2C@3C@1CC@2C@3C @1C@3C@2C@1C@3C@1C@2C@3C @1CC@2C@1CC@2C@1C@2C @4B16B16BG16G16GE16E16EC16C16C16C16
+ G>CE<G>CF<G>CE<G>CF<G>CE<G FB->D<FB->E-<FB- L32EFF+GG+AA+B>CC+DD+EFF+GG+AA+B>CC+DD+EFF+GG+AA+B
+ G>CE<G>CF<G>CE<G>CF<G>CE<G FB->D<FB->E-<FB- L32EFF+GG+AA+B>CC+DD+EFF+GG+AA+B>CC+DD+EFF+G
+ R1R1R1R1
+MML
+ @5O4V15L8 EDCG^4F4E4DCR8CDED^4<@8V15B-1^4@W4@W8 @5V15
+ CCCC CCCC CCCC CCCC CCCC CCCC CCCC CCCC
+ @1C@3C@2C@3C@1CC@2C@3C @1C@3C@2C@1C@3C@1C@2C@3C @1C@3C@2C@3C@1CC@2C@3C @1C@3C@2C@1C@3C@1C@2C@3C
+ L16O5V11 CEG>C<CEG>C<CEG>C<CEG>C<CEG>C<CEG>C<CEG>C<CEG>C< <B->DFB-<B->DFB-<B->DFB-<B->DFB- <<B->DFB- DFB->D<FB->DF <B->DFB-
+ O5Q8L4 V13CV12C^2C1<V13B-V12B-^2B-1
+   O5V11L8Q8 R8EDCG^4F4E4DCR8CDED^4<B-2B-^1
+MML
+ EDCG^4F4E4DCR8CG>C<B-^4>C^4D1<CD
+ CCCC CCCC CCCC CCCC CCCC CCCC B-AGF FE-D<B-
+ @1C@3C@2C@3C@1CC@2C@3C @1C@3C@2C@1C@3C@1C@2C@3C @1C@3C@2C@3C@1CC@2C@3C @1C@2CC@1C@3C@2CCC
+ CEG>C<CEG>C<CEG>C<CEG>C<CEG>C<CEG>C<CEG>C<CEG>C< EG>CE<EG>CE<EG>CE<EG>CE<EG>CE<EG>CE<EG>CE<EG>CE<
+ O5Q8L4 V13CV12C^2C1<V13B-V12B-^2B-1
+ EDCG^4F4E4DCR8CG>C<B-^4>C^4D1<CD
+MML
+ E^4FFR8GR8D^2CR8DR8 E^4F48GR8>C^2<BGR8D
+ AAAAAAAG4GGGGGG F4FFFFFFG4GGGGGGA4
+ @1C@3C@2C@1C@3C@1C@2C@1C @3CC@2C@1C@3C@1C@2C@1C @1C@3C@2C@1C@3C@1C@2C@3C @3CC@2C@1C@3C@1C@2C@3C
+ L8Q8 ACEA4CEG4<B>DG4<B>DF4<A>CF4<A>CG4<B>DG4<B>DA4
+ V13AV12A2^8V13GV12G^2V13FV12F^2V13GV12G^2
+ E^4FFR8GR8D^2CR8DR8 E^4F48GR8>C^2<BGR8D
+MML
+ E^4FR8GR8D^2CR8DR8 E-DCE-4<A->CE-FE-DF4<B->DF
+  AAAAAAG4GGGGGG F4A-A->E-4<A->E-<A- B-B-B->F4<B->F<B-
+ @1C@3C@2C@1C@3C@1C@2C@1C @3CC@2C@1C@3C@1C@2C@1C @1CC@2C@1CC@2C@1C@2C @2C@1CC@9C4 @4B16B16G16G16E16E16
+ CEA4CEG4<B>DG4<B>DG< A-E-CA-4<A-16>C16E-16A-16>C16E-16 <B-FDB-4<B-16>D16F16B-16>D16F16
+ V13AV12A^2V13GV12G^2^8 V13A-V12A-8V13A-V12A-8V13A-B-V12B-8V13B-V12B-8V13B-
+ E^4FR8GR8D^2CR8DR8 E-DCE-4<A->CE-FE-DF4<B->DF
