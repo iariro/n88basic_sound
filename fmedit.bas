@@ -1,208 +1,210 @@
-' FMéŸ³æºéŸ³è‰²ã‚¨ãƒ‡ã‚£ã‚¿
-'
-' 2019/05/10-05/13
-' kumagai
-'
-' 00 @      0
-' 01
-' 02 FB     7
-' 03 ALG    7
-' 04 WF     5
-' 05 SYNC   255
-' 06 SPEED  16383
-' 07 PD     -127
-' 08 AD     -127
-' 09 PS     15
-' 10
-' 11  MSK AR  DR  SR  RR  SL  TL  KS  ML  DT  AS
-' 12  0   31  31  31  15  15  127  3  15  -4  15
-' 13  0   31  31  31  15  15  127  3  15  -4  15
-' 14  0   31  31  31  15  15  127  3  15  -4  15
-' 15  0   31  31  31  15  15  127  3  15  -4  15
-'
-' ------------------------------------------------------------------------------
-' åˆæœŸåŒ–
-clear,&h9e00
-play alloc 255
-'
-defint a-z
-option base 0
-dim vp(4, 9)
-dim vpmax(4, 10)
-dim vpmin(4, 10)
-dim vpstp(4, 10)
-dim vname$(81)
-cls 3
-'
-' å€¤ã®ç¯„å›²èª­ã¿è¾¼ã¿
-for i=0 to 8
-  read vpmin(0, i), vpmax(0, i), vpstp(0, i)
-next i
-'
-for i=0 to 10
-  read min, max, stp
-  for j=1 to 4
-    vpmin(j, i) = min
-    vpmax(j, i) = max
-    vpstp(j, i) = stp
-  next j
-next i
-'
-open "vname.txt" for input as #1
-  for i=0 to 81
-    read vname$(i)
-  next i
-close #1
-'
-vn = 0
-' éŸ³è‰²èª­ã¿è¾¼ã¿
-gosub *printvn
-'
-area=0
-cx=0
-cy=0
-' ã‚­ãƒ¼å¾…ã¡
-loop = 1
-while loop = 1
-' print cursor
-  if area=0 then locate 6, 0
-  if area=1 then locate 6, 2+cy
-  if area=2 then locate 1 + 4*cx, 11+cy
-  print "*"
-' key wait
-  k$ = ""
-  while k$=""
-    k$=inkey$
-  wend
-'
-' Esc to end
-  if asc(k$) = 27 then loop=0 : goto *cont
-' cursor to move *
-  if asc(k$) >= 28 and asc(k$) <= 31 then gosub *move : goto *cont
-' P to play
-  if k$="p" or k$="P" then gosub * pl : goto *cont
-' u/d to up/down
-  if k$="u" or k$="d" or k$="U" or k$="D" then gosub *updown : goto *cont
-  gosub *move
-*cont
-wend
-end
-' ------------------------------------------------------------------------------
-' ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿è¡¨ç¤º
-*printvn
-voice copy vn, vp
-locate 0, 0 : print using "@      ##  @"; vn; vname$(vn)
-locate 0, 2 : print using "FB     #"; (vp(0, 0) and &h38) / 8
-locate 0, 3 : print using "ALG    #"; vp(0, 0) and &h7
-locate 0, 4 : print using "WF     #"; vp(0, 2)
-locate 0, 5 : print using "SYNC   ###"; vp(0, 3)
-locate 0, 6 : print using "SPEED  #####"; vp(0, 4)
-locate 0, 7 : print using "PD     ###"; vp(0, 5)
-locate 0, 8 : print using "AD     ###"; vp(0, 6)
-locate 0, 9 : print using "PS     ##"; vp(0, 7)
-'
-locate 0, 11 : print " MSK AR  DR  SR  RR  SL  TL  KS  ML  DT  AS"
-for i=0 to 4
-  for j=0 to 9
-    locate 1+4*j, 11+i
-    print using "###"; vp(i+1, j)
-  next j
-next i
-return
-' ------------------------------------------------------------------------------
-' è¦–è´
-*pl
-voice vn, vp
-play "@" + str$(vn) + "c"
-return
-' ------------------------------------------------------------------------------
-' å€¤UP/DOWN
-*updown
-stp=0
-if k$="u" or k$="U" then stp=1
-if k$="d" or k$="D" then stp=-1
-on area goto *updown0,*updown1,*updown2
-'
-*updown0
-if (stp=1 and vn<81) or (stp=-1 and vn>0) then vn = vn + stp : gosub *printvn else beep
-return
-'
-*updown1
-fb = (vp(0,0) and &h38)/8
-alg = (vp(0,0) and &h7)
-if cy=0 and ((stp=-1 and fb>vpmin(0,0)) or (stp=1 and fb<vpmax(0,0))) then fb=fb+stp : vp(0,0) = fb*8+alg
-if cy=1 and ((stp=-1 and alg>vpmin(0,1)) or (stp=1 and alg<vpmax(0,1))) then alg=alg+stp : vp(0,0) = fb*8+alg
-if cy>=2 and ((stp=-1 and vp(0,cy)>vpmin(0,cy)) or (stp=1 and vp(0,cy)<vpmax(0,cy))) then vp(0,cy) = vp(0,cy) + stp * vpstp(0,cy)
-return
-'
-*updown2
-if cx=0 then *updown21 else *updown22
-*updown21
-msk=vp(0,1) and (2^cy)
-if stp=-1 and msk>0 then msk=0 else if stp=1 and msk=0 then msk=(2^cy) else beep : return
-vp(0,1) = (vp(0,1) and (&hf - 2^cy)) or msk
-locate 1+4*cx, 11+cy
-print using "###"; vp(cx, cy)
-return
-'
-*updown22
-if (stp=-1 and vp(cx-1,cy)>vpmin(cx,cy+1)) or (stp=1 and vp(cx-1,cy)<vpmax(cx,cy+1)) then vp(cx-1,cy)=vp(cx-1,cy)+stp*vpstp(cx,cy+1) else beep : return
-locate 1+4*cx, 11+cy
-print using "###"; vp(cx-1, cy)
-return
-' ------------------------------------------------------------------------------
-' ã‚«ãƒ¼ã‚½ãƒ«ç§»å‹•
-*move
-on area goto *move0,*move1,*move2
-*move0
-if asc(k$) = 31 then area=1 : locate 6, 0 : print " " else beep
-return
-'
-*move1
-cy2=cy
-if asc(k$) = 30 then cy2 = cy - 1
-if asc(k$) = 31 then cy2 = cy + 1
-if cy2=cy then beep : return
-locate 6, 2+cy
-print " "
-if cy2<0 then area=0 : cy2=0
-if cy2>7 then area=2 : cy2=0
-cy=cy2
-return
-'
-*move2
-cx2=cx : cy2=cy
-if asc(k$) = 28 and cx<9 then cx2 = cx + 1
-if asc(k$) = 29 and cx>0 then cx2 = cx - 1
-if asc(k$) = 30 then cy2 = cy - 1
-if asc(k$) = 31 and cx<4 then cy2 = cy + 1
-if cx2=cx and cy2=cy then beep : return
-locate 4*cx, 11+cy
-print " "
-if cy2<0 then area=1 : cy2=7
-cx=cx2 : cy=cy2
-return
-' ------------------------------------------------------------------------------
-' é…åˆ—ã®å„å€¤ã®ç¯„å›²
-data 0, 7, 1
-data 0, 7, 1
-data 0, 15, 1
-data 0, 5, 1
-data 0, 255, 1
-data 0, 16383, 10
-data -127, 127, 1
-data -127, 127, 1
-data 0, 15, 1
-'
-data 0, 1, 1
-data 0, 31, 1
-data 0, 31, 1
-data 0, 31, 1
-data 0, 15, 1
-data 0, 15, 1
-data 0, 127, 1
-data 0, 3, 1
-data 0, 15, 1
-data -4, 3, 1
-data 0, 15, 1
-' ------------------------------------------------------------------------------
+1000 ' FM‰¹Œ¹‰¹FƒGƒfƒBƒ^
+1010 '
+1020 ' 2019/05/10-05/13 kumagai ŠJ”­ŠJŽn
+1030 ' 2019/07/05 kumagai ŽÀ‹@ã‚ÅƒfƒoƒbƒO
+1040 '
+1050 ' 00 @      0
+1060 ' 01
+1070 ' 02 FB     7
+1080 ' 03 ALG    7
+1090 ' 04 WF     5
+1100 ' 05 SYNC   255
+1110 ' 06 SPEED  16383
+1120 ' 07 PD     -127
+1130 ' 08 AD     -127
+1140 ' 09 PS     15
+1150 ' 10
+1160 ' 11  MSK AR  DR  SR  RR  SL  TL  KS  ML  DT  AS
+1170 ' 12  0   31  31  31  15  15  127  3  15  -4  15
+1180 ' 13  0   31  31  31  15  15  127  3  15  -4  15
+1190 ' 14  0   31  31  31  15  15  127  3  15  -4  15
+1200 ' 15  0   31  31  31  15  15  127  3  15  -4  15
+1210 '
+1220 ' ------------------------------------------------------------------------
+1230 ' ‰Šú‰»
+1240 CLEAR,&H9E00
+1250 PLAY ALLOC 255
+1260 '
+1270 DEFINT A-Z
+1280 OPTION BASE 0
+1290 DIM VP(4, 9)
+1300 DIM VPMAX(4, 10)
+1310 DIM VPMIN(4, 10)
+1320 DIM VPSTP(4, 10)
+1330 DIM VNAME$(81)
+1340 CLS 3
+1350 '
+1360 ' ’l‚Ì”ÍˆÍ“Ç‚Ýž‚Ý
+1370 FOR I=0 TO 8
+1380 READ VPMIN(0, I), VPMAX(0, I), VPSTP(0, I)
+1390 NEXT I
+1400 '
+1410 FOR I=0 TO 10
+1420 READ MIN, MAX, STP
+1430 FOR J=1 TO 4
+1440 VPMIN(J, I) = MIN
+1450 VPMAX(J, I) = MAX
+1460 VPSTP(J, I) = STP
+1470 NEXT J
+1480 NEXT I
+1490 '
+1500 OPEN "vname.txt" FOR INPUT AS #1
+1510 FOR I=0 TO 81
+1520 INPUT #1, VNAME$(I)
+1530 NEXT I
+1540 CLOSE #1
+1550 '
+1560 VN = 0
+1570 ' ‰¹F“Ç‚Ýž‚Ý
+1580 GOSUB *PRINTVN
+1590 '
+1600 AREA=0
+1610 CX=0
+1620 CY=0
+1630 ' ƒL[‘Ò‚¿
+1640 LOOP = 1
+1650 WHILE LOOP = 1
+1660 ' print cursor
+1670 IF AREA=0 THEN LOCATE 6, 0
+1680 IF AREA=1 THEN LOCATE 6, 2+CY
+1690 IF AREA=2 THEN LOCATE 5*CX, 12+CY
+1700 PRINT "*"
+1710 ' key wait
+1720 K$ = ""
+1730 WHILE K$=""
+1740 K$=INKEY$
+1750 WEND
+1760 '
+1770 ' Esc to end
+1780 IF ASC(K$) = 27 THEN LOOP=0 : GOTO *CONTI
+1790 ' cursor to move *
+1800 IF ASC(K$) >= 28 AND ASC(K$) <= 31 THEN GOSUB *MOVE : GOTO *CONTI
+1810 ' P to play
+1820 IF K$="p" OR K$="P" THEN GOSUB * PL : GOTO *CONTI
+1830 ' u/d to up/down
+1840 IF K$="u" OR K$="d" OR K$="U" OR K$="D" THEN GOSUB *UPDOWN : GOTO *CONTI
+1850 GOSUB *MOVE
+1860 *CONTI
+1870 WEND
+1880 END
+1890 ' ------------------------------------------------------------------------
+1900 ' ƒpƒ‰ƒ[ƒ^•\Ž¦
+1910 *PRINTVN
+1920 VOICE COPY VN, VP
+1930 LOCATE 0, 0 : PRINT "VOICE  "; VN; STRING$(40, " ")
+1940 LOCATE 12, 0 : PRINT VNAME$(VN)
+1950 LOCATE 0, 2 : PRINT "FB     "; (VP(0, 0) AND &H38) / 8
+1960 LOCATE 0, 3 : PRINT "ALG    "; VP(0, 0) AND &H7
+1970 LOCATE 0, 4 : PRINT "WF     "; VP(0, 2)
+1980 LOCATE 0, 5 : PRINT "SYNC   "; VP(0, 3)
+1990 LOCATE 0, 6 : PRINT "SPEED  "; VP(0, 4)
+2000 LOCATE 0, 7 : PRINT "PD     "; VP(0, 5)
+2010 LOCATE 0, 8 : PRINT "AD     "; VP(0, 6)
+2020 LOCATE 0, 9 : PRINT "PS     "; VP(0, 7)
+2030 '
+2040 LOCATE 2, 11 : PRINT "AR   DR   SR   RR   SL   TL   KS   ML   DT   AS"
+2050 FOR I=1 TO 4
+2060 FOR J=0 TO 9
+2070 LOCATE 1+5*J, 11+I
+2080 PRINT USING "###"; VP(I, J)
+2090 NEXT J
+2100 NEXT I
+2110 RETURN
+2120 ' ------------------------------------------------------------------------
+2130 ' Ž‹’®
+2140 *PL
+2150 VOICE VN, VP
+2160 PLAY "@" + STR$(VN) + "c"
+2170 RETURN
+2180 ' ------------------------------------------------------------------------
+2190 ' ’lUP/DOWN
+2200 *UPDOWN
+2210 STP=0
+2220 IF K$="u" OR K$="U" THEN STP=1
+2230 IF K$="d" OR K$="D" THEN STP=-1
+2240 ON AREA GOTO *UPDOWN0,*UPDOWN1,*UPDOWN2
+2250 '
+2260 *UPDOWN0
+2270 IF (STP=1 AND VN<81) OR (STP=-1 AND VN>0) THEN VN = VN + STP : GOSUB *PRINTVN ELSE BEEP
+2280 RETURN
+2290 '
+2300 *UPDOWN1
+2310 FB = (VP(0,0) AND &H38)/8
+2320 ALG = (VP(0,0) AND &H7)
+2330 IF CY=0 AND ((STP=-1 AND FB>VPMIN(0,0)) OR (STP=1 AND FB<VPMAX(0,0))) THEN FB=FB+STP : VP(0,0) = FB*8+ALG
+2340 IF CY=1 AND ((STP=-1 AND ALG>VPMIN(0,1)) OR (STP=1 AND ALG<VPMAX(0,1))) THEN ALG=ALG+STP : VP(0,0) = FB*8+ALG
+2350 IF CY>=2 AND ((STP=-1 AND VP(0,CY)>VPMIN(0,CY)) OR (STP=1 AND VP(0,CY)<VPMAX(0,CY))) THEN VP(0,CY) = VP(0,CY) + STP * VPSTP(0,CY)
+2360 RETURN
+2370 '
+2380 *UPDOWN2
+2390 IF CX=0 THEN *UPDOWN21 ELSE *UPDOWN22
+2400 *UPDOWN21
+2410 MSK=VP(0,1) AND (2^CY)
+2420 IF STP=-1 AND MSK>0 THEN MSK=0 ELSE IF STP=1 AND MSK=0 THEN MSK=(2^CY) ELSE BEEP : RETURN
+2430 VP(0,1) = (VP(0,1) AND (&HF - 2^CY)) OR MSK
+2440 LOCATE 1+4*CX, 11+CY
+2450 PRINT USING "###"; VP(CX, CY)
+2460 RETURN
+2470 '
+2480 *UPDOWN22
+2490 IF (STP=-1 AND VP(CX-1,CY)>VPMIN(CX,CY+1)) OR (STP=1 AND VP(CX-1,CY)<VPMAX(CX,CY+1)) THEN VP(CX-1,CY)=VP(CX-1,CY)+STP*VPSTP(CX,CY+1) ELSE BEEP : RETURN
+2500 LOCATE 1+4*CX, 11+CY
+2510 PRINT USING "###"; VP(CX-1, CY)
+2520 RETURN
+2530 ' ------------------------------------------------------------------------
+2540 ' ƒJ[ƒ\ƒ‹ˆÚ“®
+2550 *MOVE
+2560 ON AREA+1 GOTO *MOVE0,*MOVE1,*MOVE2
+2570 *MOVE0
+2580 IF ASC(K$) = 31 THEN AREA=1 : LOCATE 6, 0 : PRINT " " ELSE BEEP
+2590 RETURN
+2600 '
+2610 *MOVE1
+2620 CY2=CY
+2630 IF ASC(K$) = 30 THEN CY2 = CY - 1
+2640 IF ASC(K$) = 31 THEN CY2 = CY + 1
+2650 IF CY2=CY THEN BEEP : RETURN
+2660 LOCATE 6, 2+CY
+2670 PRINT " "
+2680 IF CY2<0 THEN AREA=0 : CY2=0
+2690 IF CY2>7 THEN AREA=2 : CY2=0
+2700 CY=CY2
+2710 RETURN
+2720 '
+2730 *MOVE2
+2740 CX2=CX : CY2=CY
+2750 IF ASC(K$) = 28 AND CX<9 THEN CX2 = CX + 1
+2760 IF ASC(K$) = 29 AND CX>0 THEN CX2 = CX - 1
+2770 IF ASC(K$) = 30 THEN CY2 = CY - 1
+2780 IF ASC(K$) = 31 AND CY<3 THEN CY2 = CY + 1
+2790 IF CX2=CX AND CY2=CY THEN BEEP : RETURN
+2800 LOCATE 5*CX, 12+CY
+2810 PRINT " "
+2820 IF CY2<0 THEN AREA=1 : CY2=7
+2830 CX=CX2 : CY=CY2
+2840 RETURN
+2850 ' ------------------------------------------------------------------------
+2860 ' ”z—ñ‚ÌŠe’l‚Ì”ÍˆÍ
+2870 DATA 0, 7, 1
+2880 DATA 0, 7, 1
+2890 DATA 0, 15, 1
+2900 DATA 0, 5, 1
+2910 DATA 0, 255, 1
+2920 DATA 0, 16383, 10
+2930 DATA -127, 127, 1
+2940 DATA -127, 127, 1
+2950 DATA 0, 15, 1
+2960 '
+2970 DATA 0, 1, 1
+2980 DATA 0, 31, 1
+2990 DATA 0, 31, 1
+3000 DATA 0, 31, 1
+3010 DATA 0, 15, 1
+3020 DATA 0, 15, 1
+3030 DATA 0, 127, 1
+3040 DATA 0, 3, 1
+3050 DATA 0, 15, 1
+3060 DATA -4, 3, 1
+3070 DATA 0, 15, 1
+3080 ' ------------------------------------------------------------------------
+
