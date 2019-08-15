@@ -1,7 +1,7 @@
 ' FIRECRACKER
 '   A melody
 MML
- mb t120 @74v14 o5 l16 r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc
+ mb t120 @74v14q4 o5 l16 r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc
  mb @58 l4 rcrc rcrc rcrc rcrc
  mb r1r1r1r1
  mb v14 o3 l16 grarbrrdrderdrer grarbrrdrderdrer grarbrrdrderdrer grarbrrdrderdrer

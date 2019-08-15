@@ -1,7 +1,16 @@
 ' FIRECRACKER
+'   Intro
+MML
+ mb t120 @74v15l16q4 o5 r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc
+ mb r1 r1 r1 r1
+ mb r1 r1 r1 r1
+ mb v15 r1 r1 r1 r2 o3 l16 rderdrer
+ mb v15 r1 r1 r1 r2 o6 l16 rderdrer
+ mb r1 r1 r1 r1
+' FIRECRACKER
 '   A melody
 MML
- mb t120 @74v14 o5 l16 r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc
+ mb t120 @74v14q4 o5 l16 r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc
  mb @58 l4 rcrc rcrc rcrc rcrc
  mb r1r1r1r1
  mb v14 o3 l16 grarbrrdrderdrer grarbrrdrderdrer grarbrrdrderdrer grarbrrdrderdrer
@@ -39,9 +48,9 @@ MML
 MML
  @74v13 o4 l16 r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc
  @58 l4 rcrc rcrc rcrc rcrc rcrc rcrc rcrc rcrc
- @25 v15 o4 l16q4 b>c<b>c<b>c<b>c<b>c<b>c<b>c<b>c <b>c<b>c<b>c<b>c<b>c<b>c<b>c#dd# efefefefefefefef efefefefefefc#def f# r8.r2. r1r1r1
+ @25 v15 o4 l16q4 b>c<b>c<b>c<b>c<b>c<b>c<b>c<b>c <b>c<b>c<b>c<b>c<b>c<b>c<b>c#dd# efefefefefefefef efefefefefefc#def r1r1r1r1
  v15 o2 l16 br>crd#rr<f#rf#grf#rgr br>crd#rr<brb>cr<br>d#r erfrg#rr<brb>cr<br>dr erfrg#rr<brb>cr<br>dr f# r8.r2. r1r1r1
- r1r1r1r1r1r1r1r1
+ v15q8 r1r1r1r1 o1l24q8 a+>ec+f+eg a+>ec+f+ega+>ec+f+ega+>ec+f+ega+g>c+<a+>ecf+ga+> l32ce<a+f+> l24c+ec<a+>c+ec+<a+ga+>c+egf+ec+c<a+>ec+c<a+gf+ec+c<a+>cc+ l32 ec<a+g>c+<a+gf+>gf+ec+<gf+ec+gf+ec+c<a+gf+ l24 gf+ec+c<a+gf+ec+c<a+
  r1r1r1r1r1r1r1r1
 ' FIRECRACKER
 '   D melody
@@ -86,7 +95,7 @@ MML
  @58 l4 rcrc rcrc rcrc rcrc rcrc rcrc rcrc rcrc
  @25 v15 o4 l16q4 b>c<b>c<b>c<b>c<b>c<b>c<b>c<b>c <b>c<b>c<b>c<b>c<b>c<b>c<b>c#dd# efefefefefefefef efefefefefefc#def f# r8.r2. r1r1r1
  v15 o2 l16 br>crd#rr<f#rf#grf#rgr br>crd#rr<brb>cr<br>d#r erfrg#rr<brb>cr<br>dr erfrg#rr<brb>cr<br>dr f# r8.r2. r1r1r1
- r1r1r1r1r1r1r1r1
+ v15q7 r1r1r1r1 o5 f+32.f+16r8r64>f+32.f+16r8r64c+32.c+16r4.r64 e32.e16r8r64<b32.b16r8r64>d32.d16r8r64<a32.a16r8r64 >f+16r16 l32 f+ec+<ba+f+ec+ l24 f+ec+<a+gf+>f+ec+<c+<a+f+ec+<a+<f+gg+aa+b> l32 cc+dd+eff+gg+aa+b>cc+dd+eff+gg+aa+b
  r1r1r1r1r1r1r1r1
 ' FIRECRACKER
 '   D melody
