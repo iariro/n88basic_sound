@@ -1,7 +1,7 @@
 ' FIRECRACKER
 '   C melody
 MML
- @74v13 o4 l16 r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc
+ @74v13 o5 l16 r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc
  @58 l4 rcrc rcrc rcrc rcrc rcrc rcrc rcrc rcrc
  @25 v15 o4 l16q4 b>c<b>c<b>c<b>c<b>c<b>c<b>c<b>c <b>c<b>c<b>c<b>c<b>c<b>c<b>c#dd# efefefefefefefef efefefefefefc#def f# r8.r2. r1r1r1
  v15 o2 l16 br>crd#rr<f#rf#grf#rgr br>crd#rr<brb>cr<br>d#r erfrg#rr<brb>cr<br>dr erfrg#rr<brb>cr<br>dr f# r8.r2. r1r1r1

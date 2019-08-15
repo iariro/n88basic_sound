@@ -1,9 +1,9 @@
 ' FIRECRACKER
 '   B' melody
 MML
- @74v13 o4l16 r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc
+ @74v13 o5 l16 r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc
  @58 l4 rcrc rcrc rcrc rcrc rcrc rcrc rcrc rcrc
- @78 v15 o5 q8l8 b4.a16.r32b4.a16.r32f#4.e16.r32f#4.e16.r32 b4.a16.r32b4.a16.r32f#4.e16.r32f#4.e16.r32 <b4.a16.r32b4.a16.r32b>d<b24>d24<b24af#ef#a b4.a16.r32b4.a16.r32b>d<b24>d24<b24af#ef#a
+ @78 v14 o5 q8l8 b4.a16.r32b4.a16.r32f#4.e16.r32f#4.e16.r32 b4.a16.r32b4.a16.r32f#4.e16.r32f#4.e16.r32 <b4.a16.r32b4.a16.r32b>d<b24>d24<b24af#ef#a b4.a16.r32b4.a16.r32b>d<b24>d24<b24af#ef#a
  v15 o2 l16 br>c#rdrr<brb>d#r<br>d#r <erf#rgref#rgarf#rar br>c#rdrr<brb>d#r<br>d#r erf#rgref#rgarf#rar <br>c#rdrr<f#rf#grf#rar >drerf#ref#rgarf#rar <br>c#rdrr<f#rf#grf#rar >drerf#ref#rgarf#rar
  v13 o4q8 d2d#2d2c#2 <b2>c2<b2a#2 >d1f#2e4c#4 d1f#2e4c#4
  v13 o3q8 a2>c2<b2a#2 f#2a2g2f#2 a1>c2<b4a4 a1>c2<b4a4
