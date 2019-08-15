@@ -1,8 +1,19 @@
 ' FIRECRACKER
 '   A melody
+VOICE
+ 1
+ Bass drum
+ 60,  15,   0,   1,2000,-127,   0,   8,   0,   0
+  0,  10,  11,  12,  10, 120,   0,   2,   0,   0
+  0,   5,   4,   9,   2, 110,   0,   1,   0,   0
+  0,  12,  16,  12,  11, 110,   0,   0,   3,   0
+  0,  15,  17,   9,  11, 120,   0,   1,   7,   0
+STRING
+ 1
+ @1<c8>@74v14f8@58<v15c8>@74v13cc
 MML
- mb t120 @74v14q4 o5 l16 r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc r8f8r8cc
- mb @58 l4 rcrc rcrc rcrc rcrc
+ mb t120 v14q6 o5 l16 x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$;
+ mb
  mb r1r1r1r1
  mb v14 o3 l16 grarb.r.drderdrer grarb.r.drderdrer grarb.r.drderdrer grarb.r.drderdrer
  mb r1r1r1r1
