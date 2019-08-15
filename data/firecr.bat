@@ -1,6 +1,8 @@
 
 set COM=com6
 
+copy fire0.mml %COM%
+timeout /t 8
 copy fire1.mml %COM%
 timeout /t 13
 copy fire1.mml %COM%
