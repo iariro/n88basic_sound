@@ -2,7 +2,7 @@
 '   C melody
 MML
  l16 x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$;
- r1 r1 r1 r1 r1 r1 r1 r1
+ l16 r1 r1 r1 r1 o5_b x=s2$; x=s2$; x=s2$; x=s2$;
  @25 v15 o4 l16q4 b>c<b>c<b>c<b>c<b>c<b>c<b>c<b>c <b>c<b>c<b>c<b>c<b>c<b>c<b>c#dd# efefefefefefefef efefefefefefc#def r1r1r1r1
  v15 o2 l16 br>crd#.r.<f#rf#grf#rgr br>crd#.r.<brb>cr<br>d#r erfrg#.r.<brb>cr<br>dr erfrg#.r.<brb>cr<br>dr f# r8.r2. r1r1r1
  v15q8 r1r1r1r1 o1l24q8 a+>ec+f+eg a+>ec+f+ega+>ec+f+ega+>ec+f+ega+g>c+<a+>ecf+ga+> l32ce<a+f+> l24c+ec<a+>c+ec+<a+ga+>c+egf+ec+c<a+>ec+c<a+gf+ec+c<a+>cc+ l32 ec<a+g>c+<a+gf+>gf+ec+<gf+ec+gf+ec+c<a+gf+ l24 gf+ec+c<a+gf+ec+c<a+

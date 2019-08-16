@@ -2,7 +2,7 @@
 '   A melody
 MML
  v14 o5 l16 x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$;
- r1 r1 r1 r1 r1 r1
+ l16 _c x=s2$; x=s2$; x=s2$; x=s2$; x=s2$; x=s2$;
  @71 v15 o6q8 d8l16ed<b.r32a.r32g.r32e.r32d.r32e.r32gaged.r32<b.r32a.r32b.r32>d.r32e.r32 ded<ba.r32>ded<ba.r32>ded<ba.r32a.r32b.r32b.r32>d.r32d.r32e.r32e.r32 g4.g4.r8a8 b4.b2r8
  v14 o3 l16 grarb.r.drderdrer grarb.r.drderdrer grarb.r.drderdrer grarb.r.drderdrer grarb.r.drderdrer grarb.r.drderdrer
  v13 o5 a8l16bag.r32e.r32d.r32<b.r32a.r32b.r32>ded<ba.r32g.r32e.r32g.r32a.r32b.r32 abage.r32abage.r32abag e.r32e.r32g.r32g.r32a.r32a.r32b.r32b.r32 >d4.d4.r8e8 f#4.f#2r8
