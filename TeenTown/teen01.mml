@@ -1,0 +1,20 @@
+' Teen Town
+'   Intro
+VOICE
+ 0
+ Hi hat
+ 49,  15,   0,   0,   0,   0,   0,   0,   0,   0
+  0,  15,  12,  12,  12, 121,   0,   1,   3,   0
+  0,  22,  15,  10,  10, 110,   0,  14,   3,   0
+  0,  22,  14,  11,  11, 110,   0,   7,   3,   0
+  0,  10,  15,   6,   6, 110,   0,   7,   7,   0
+STRING
+ 1
+ @0ccc8@58c@0cc8
+MML
+ mb t130 v14 @9 o5l8 agag3r24ag f+ef+e4.r4 >dcdc3r24dc <baba4.r8>>c16c16
+ mb v15 l16 x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; @0ccc8r8@58c16c16
+ mb r1r1r1r1
+ mb v15 @9 o6l8 c<a+12r24>c<a+3r24>c<a+ agag4..r. >fd+fd+4.fd+ dcdc4.r>c16c16
+ mb v15 @9 o5l8 ed12r24ed3r24ed c+<b>c+<b4.r4 >agag3r24ag f+ef+e3r1
+ mb r1r1r1r1
