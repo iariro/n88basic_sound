@@ -2,8 +2,8 @@
 '   C melody
 MML
  l16 x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$;
- l16 r1 r1 r1 r1 o5_b x=s2$; x=s2$; x=s2$; x=s2$;
+ v15q7 @3_c r1r1r1r1 o5 f+32.f+16r8r64>f+32.f+16r8r64c+32.c+16r4.r64 e32.e16r8r64<b32.b16r8r64>d32.d16r8r64<a32.a16r8r64 >f+16r16 l32 f+ec+<ba+f+ec+ l24 f+ec+<a+gf+>f+ec+<c+<a+f+ec+<a+ f+gg+aa+b> l32 cc+dd+eff+gg+aa+b>cc+dd+eff+gg+aa+b
  @25 v15 o4 l16q4 b>c<b>c<b>c<b>c<b>c<b>c<b>c<b>c <b>c<b>c<b>c<b>c<b>c<b>c<b>c#dd# efefefefefefefef efefefefefefc#def f# r8.r2. r1r1r1
  v15 o2 l16 br>crd#.r.<f#rf#grf#rgr br>crd#.r.<brb>cr<br>d#r erfrg#.r.<brb>cr<br>dr erfrg#.r.<brb>cr<br>dr f# r8.r2. r1r1r1
- v15q7 r1r1r1r1 o5 f+32.f+16r8r64>f+32.f+16r8r64c+32.c+16r4.r64 e32.e16r8r64<b32.b16r8r64>d32.d16r8r64<a32.a16r8r64 >f+16r16 l32 f+ec+<ba+f+ec+ l24 f+ec+<a+gf+>f+ec+<c+<a+f+ec+<a+<f+gg+aa+b> l32 cc+dd+eff+gg+aa+b>cc+dd+eff+gg+aa+b
+ r1r1r1r1r1r1r1r1
  r1r1r1r1r1r1r1r1

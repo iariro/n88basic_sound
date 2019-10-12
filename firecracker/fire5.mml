@@ -2,7 +2,7 @@
 '   D melody
 MML
  l16 x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$;
- l16 _f x=s2$; x=s2$; x=s2$; x=s2$; _e x=s2$; _c x=s2$; _f g>g<ggggg>g o7_f# <g>g<ggggg>g< _g x=s2$;
+ @35 l16 o6q1 _f x=s2$; x=s2$; x=s2$; x=s2$; _e x=s2$; _c x=s2$; _f g>g<ggggg>g o7_f# <g>g<ggggg>g< _g x=s2$;
  @78 o6q7 l8 c4.<b>c4.<ba4.ga4.g f#4.ef#4.ed4.cd4.c o5b4.ab4.ab>d<b24>d24<b24a b>d<b24>d24<b24a b2 l16rb>c#def#gab2a2
  v15 o3 l16 crdre.r.<grgargrar >crdre.r.<grgargrar >crdre.r.<grgargrar >crdre.r.<grgargrar br>c#rd.r.<f#rf#grf#rar grarb.r.>drderdrer crdre.r.c#rc#erc#r er drerf#.r.drderdrer
  v13 o5q7 e4.d8e4.d8c4.<b8>c4.<b8 a4.g8a4.g8f#4.e8f#4.e8 l8 b4.ab4.a b>d<bab>d<ba b1 >b2a2
