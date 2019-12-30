@@ -3,7 +3,7 @@ set COM=com6
 set WAIT=15
 
 copy teen01.mml %COM%
-timeout /t %WAIT%
+timeout /t 5
 
 copy teen02.mml %COM%
 timeout /t %WAIT%
