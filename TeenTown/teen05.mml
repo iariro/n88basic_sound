@@ -2,15 +2,22 @@
 '   Chord
 MML
  r4 @31 l8 o3 eeg+g+bb >c+2.r2 <aa>c+c+ee f+1 re<eeg+g+bb >c+1 r4<aa>c+c+ee f+1
- o3 x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$;
- @78 l1 rrrr o5 q8 e f f+2g2 g+2>c+2 f+2^f+6r1
- l1 rrrr o4 b f a a- b b- g- >c <f# g b >c
- l1 rrrr o4 f# e- e g- f# e- d- a- d# d# f# g#
- r1r1r1r1 o4 d1 c#1 c#1 e-1 c#1 <f g g- >c# <a# >c# d#
+ o3 @58c8@0c8@58c@0cc8 x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$;
+ @78 l1 rrrr o5 q8 e f f+2g2 g+2>c+2
+ l1 rrrr o4 b f a a-
+ l1 rrrr o4 f# e- e g-
+ l1 r1r1r1r1 o4 d1 c#1 c#1 e-1
+MML
+ r1r1r1r1r1r1r1r1
+ x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; @0cc@58c8@0c@58c@0c8 x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; @58c24c24c24ggg8@0c8
+ f+2.r4 r1r1r1 o5@8c+4r8e8r2 r1r1r1
+ b b- g- >c <f# g b >c
+ f# e- d- a- d# d# f# g#
+ c#1 <f g g- >c# <a# >c# d#
 MML
  r1r1r1r1
- x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$;
- r1r1r1r1
- e c# a d#
+ x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; x=s1$; @58<rcrcc>c<c>c
+ @78 o5 c#<a#>f#d#
+ e c# a f#
  g# d# b d#
  e <g# >e <g#
