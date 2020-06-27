@@ -1,0 +1,8 @@
+' Shostakovich Symphony 4 mov 3 
+MML
+ mb t72 l16 @37 ro4fdf<a2.^16 >f df<g2.  ab>c+d efgg+g>c <g>c<g8fa32a+32 agfgd+4 df>d4 <cd+>c4 <<b>dba g+f+edc+d >c+4<cf+ >d+4<eg >efgedd+ dd+fdcc+ <a+aa+>cc+d+ c<a+>cc+d+c dgdgfe d+c+cfc<b ag+aa+b>c
+ mb l16 @7 r4ro5f+ d+f+<a+2.^16 >f+d+f+ <g+2^8 a+>c dd+ff+g+a g+>c+<g+>c+<g+8 f+a+32b32a+g+f+g+ e4d+f+ >d+4<c+e >c+4<cd+ >c<a+aa+gd+ df>d4 <eg>e4 <fg+>ff+g+f d+ed+ef+d+ c+d<ba+b>c+ dec+<a+>c+d edd+g+d+g+ f+fedc+f+ c+c<a+aa+b
+ mb l16 @9v14 r2 r o5fdf <a2.^16 >fdf<g2^8 ab>c+d efg>c<g>c <g8fa32a+32ag fgd+4 df>d4 <cd+>c4 <<b>dbag+a edc+e>c+4 <d+f+>d+4 <eg>ef gedd+dd+ fdcc+<a+a a+>cc+d+c+c cc+d+c+dg dgfed+d cfc<bag+
+ mb l16 v14 r1 r1 r1 r4. o3f+a+32b32a+g+f+g+ e8.d+8f+ >d+8.<c+8e >c+4<cd+ >c<a+aa+fd+ d8.f8>d+ <eg>e4 r1 r8 edd+g+d+g+ f+fedc+f+ c+c<a+aa+b
+ mb l16 v14 r2. r o3f+d+f+<a+2.^16 >f+ d+f+<g+2 a+>c dd+ff+g+a g+>c+<g+>c+<g+8 r1 r1 r2 r8 fg+>ff+g+f d+ed+ef+d+ c+d<ba+b>c+ dec+<b>c+d er r4r4.
+ 
