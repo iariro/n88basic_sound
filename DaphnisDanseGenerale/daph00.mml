@@ -1,8 +1,8 @@
 ' Daphnis et Chloe Danse Generale
 '   Initialize
 MML
- mb t200 @20 l16
- mb @20 l16
+ mb t210 @9 l16
+ mb @8 l16
  mb @20 l16
  mb
  mb
